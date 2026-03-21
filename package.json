@@ -1,0 +1,12 @@
+{
+  "name": "blomp-activater",
+  "version": "1.0.0",
+  "description": "Automated Blomp dashboard login with anti-detection measures",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}

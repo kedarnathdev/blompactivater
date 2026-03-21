@@ -1,0 +1,9 @@
+node_modules/
+npm-debug.log*
+.env
+*.log
+.DS_Store
+Thumbs.db
+
+# Credentials — never commit real accounts
+accounts.json
