@@ -1,0 +1,7 @@
+services:
+  blomp-activater:
+    image: ghcr.io/kedarnathdev/blompactivater:latest
+    container_name: blomp-activater
+    restart: unless-stopped
+    volumes:
+      - ./accounts.json:/app/accounts.json:ro
