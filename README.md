@@ -39,7 +39,7 @@ To change the schedule, edit the cron lines in the `Dockerfile`.
 ## Setup
 
 1. Copy `accounts.example.json` → `accounts.json`
-2. Fill in your real credentials (this file is gitignored)
+2. Fill in your real credentials
 
 ## License
 
