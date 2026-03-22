@@ -20,11 +20,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ✅ Enable emulation for ARM, etc.
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
-      # ✅ Enable Buildx (required for multi-arch)
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -44,8 +42,7 @@ jobs:
             type=sha
             type=raw,value=latest
 
-      # 🚀 Multi-arch build + push
-      - name: Build and push multi-arch Docker image
+      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -53,3 +50,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
